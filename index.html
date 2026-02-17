@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COMMUNITY CODING - BELAJAR CODING</title>
+<style>
+body {
+    font-family: Arial,sans-serif;
+    margin:0; padding:20px;
+    text-align:center;
+    background: radial-gradient(ellipse at bottom,#0b0c2a 0%,#090a1b 100%);
+    color:#fff;
+    overflow-x:hidden;
+}
+.page{
+    display:none;
+    padding:20px;
+    background:rgba(0,0,50,0.6);
+    margin:50px auto;
+    max-width:800px;
+    border-radius:10px;
+}
+.active{display:block;}
+button{
+    padding:12px 25px;
+    margin-top:20px;
+    font-size:16px;
+    border:none;
+    border-radius:5px;
+    background:#ff6f61;
+    color:white;
+    cursor:pointer;
+}
+button:hover{background:#ff3b2e;}
+h1{color:#ffd700;} 
+p{line-height:1.6;}
+textarea, select {width:80%; padding:8px; margin:5px 0; border-radius:5px; border:none;}
+textarea{resize:none;}
+.star{position:absolute;background:white;border-radius:50%;width:2px;height:2px;animation:starBlink 2s infinite;}
+@keyframes starBlink{0%,100%{opacity:1}50%{opacity:0.3}}
+</style>
+</head>
+<body>
+
+<script>
+// bintang acak
+for(let i=0;i<100;i++){
+  let s=document.createElement('div');
+  s.classList.add('star');
+  s.style.top=Math.random()*window.innerHeight+'px';
+  s.style.left=Math.random()*window.innerWidth+'px';
+  s.style.width=s.style.height=Math.random()*3+1+'px';
+  s.style.animationDuration=(Math.random()*3+1)+'s';
+  document.body.appendChild(s);
+}
+</script>
+
+<!-- Halaman 1 -->
+<div class="page active" id="page1">
+<h1>COMMUNITY CODING - BELAJAR CODING</h1>
+<p>
+Halo teman-teman, selamat datang di Community Coding!  
+Perkenalkan, nama aku Hamka selaku pelajar SMP, dan aku telah menguasai hampir setengah materi coding.  
+Nah teman-teman, aku ingin membagikan informasi tentang apa itu coding.
+</p>
+<button onclick="nextPage(2)">Buka Halaman Selanjutnya</button>
+</div>
+
+<!-- Halaman 2 -->
+<div class="page" id="page2">
+<h1>Apa Itu Coding?</h1>
+<p>
+Coding atau pemrograman adalah proses menulis instruksi yang bisa dijalankan oleh komputer.  
+Dengan coding, kita bisa membuat berbagai hal seperti website, game, aplikasi, dan robot.  
+Coding menggunakan bahasa tertentu, contohnya HTML, CSS, JavaScript, Python, dan masih banyak lagi.  
+Belajar coding melatih logika, kreativitas, dan kemampuan problem solving.  
+Bagi pelajar, belajar coding juga membuka peluang untuk membuat proyek pribadi dan mengikuti komunitas teknologi.  
+Ayo kita mengenal tentang unsur-unsur coding!
+</p>
+<button onclick="nextPage(3)">Halaman Berikutnya</button>
+</div>
+
+<!-- Halaman 3 -->
+<div class="page" id="page3">
+<h1>Unsur-Unsur Coding</h1>
+<p>
+Dalam coding, ada beberapa unsur penting yang perlu kita kenali:  
+1. <strong>Variabel:</strong> tempat untuk menyimpan data.  
+2. <strong>Fungsi / Function:</strong> blok kode yang bisa dipakai berulang.  
+3. <strong>Logika / Logic:</strong> aturan yang menentukan jalannya program (misal if-else, loop).  
+4. <strong>Input & Output:</strong> cara program menerima data dan menampilkan hasil.  
+5. <strong>Debugging:</strong> proses mencari dan memperbaiki kesalahan dalam kode.  
+6. <strong>Syntax:</strong> aturan penulisan kode dalam bahasa pemrograman tertentu.  
+</p>
+<button onclick="nextPage(4)">Lanjut ke Soal-Soal</button>
+</div>
+
+<!-- Halaman 4: Soal-soal -->
+<div class="page" id="page4">
+<h1>Soal-Soal Coding</h1>
+<form id="quizForm">
+<label>1. Apakah kamu tertarik dengan coding? (Esai)</label><br>
+<textarea id="q1" required></textarea><br><br>
+
+<label>2. Jika kamu telah mempelajari coding, apakah kamu akan berhenti dan tidak mencari tahu lagi? (Pilihan Ganda)</label><br>
+<select id="q2" required>
+<option value="">--Pilih--</option>
+<option value="iya">a. Iya</option>
+<option value="terus">b. Saya akan terus mempelajari coding</option>
+</select><br><br>
+
+<label>3. Berjanji memanfaatkan coding dengan baik dan tidak merusak perangkat (Esai)</label><br>
+<textarea id="q3" required></textarea><br><br>
+
+<label>4. Berjanji tidak membuat data palsu/hack coding walaupun fake atau real (Esai)</label><br>
+<textarea id="q4" required></textarea><br><br>
+
+<label>5. Sepertinya kamu telah mempelajari syarat-syarat coding, yuk lanjut ke halaman berikutnya (Esai)</label><br>
+<textarea id="q5" required></textarea><br><br>
+
+<button type="button" onclick="submitQuiz()">Lanjut ke Halaman Kita Kembali</button>
+</form>
+</div>
+
+<!-- Halaman 5: Layar Merah + Error 444 -->
+<div class="page" id="page5">
+<h1>Mempersiapkan Prank...</h1>
+</div>
+
+<!-- Halaman 6: Penjelasan Prank + WhatsApp -->
+<div class="page" id="page6">
+<h1>HAHAHA, PRANK!</h1>
+<p>
+Yang tadi merupakan coding prank yaitu error 444 dan layar merah, hahaha jangan panik.  
+Jika kamu tertarik untuk mempelajari coding dan sekaligus coding yang tadi, yuk masuk ke grup WhatsApp ini:  
+<br><a href="https://chat.whatsapp.com/LWHXbdXhOrY0uBVkB33bP1?mode=gi_t" target="_blank">Gabung ke Grup WhatsApp</a>
+</p>
+<button onclick="endCoding()">Akhiri Coding</button>
+</div>
+
+<script>
+function nextPage(n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page'+n).classList.add('active');
+}
+
+// submit soal
+function submitQuiz(){
+  const q1=document.getElementById('q1').value.trim();
+  const q2=document.getElementById('q2').value;
+  const q3=document.getElementById('q3').value.trim();
+  const q4=document.getElementById('q4').value.trim();
+  const q5=document.getElementById('q5').value.trim();
+  if(!q1||!q2||!q3||!q4||!q5){
+    alert("Silakan isi semua soal!");
+    return;
+  }
+  localStorage.setItem('quizAnswers', JSON.stringify({q1,q2,q3,q4,q5}));
+  // Langsung pindah ke halaman prank
+  triggerPrankPage();
+}
+
+// Layar Merah + Error 444
+function triggerPrankPage(){
+    nextPage(5);
+    const redScreen=document.createElement('div');
+    redScreen.id='redScreen';
+    redScreen.style.position='fixed';
+    redScreen.style.top='0';
+    redScreen.style.left='0';
+    redScreen.style.width='100%';
+    redScreen.style.height='100%';
+    redScreen.style.background='red';
+    redScreen.style.zIndex='9999';
+    redScreen.style.display='flex';
+    redScreen.style.justifyContent='center';
+    redScreen.style.alignItems='center';
+    redScreen.style.flexDirection='column';
+    redScreen.style.color='white';
+    redScreen.style.animation='blinkRed 0.3s infinite';
+    redScreen.innerHTML="<div id='err444' style='font-size:80px;'>444</div>";
+    document.body.appendChild(redScreen);
+
+    setTimeout(()=>{
+        redScreen.remove();
+        nextPage(6);
+    },3000);
+}
+
+// Akhiri coding -> layar hitam
+function endCoding(){
+    const blackScreen=document.createElement('div');
+    blackScreen.style.position='fixed';
+    blackScreen.style.top='0';
+    blackScreen.style.left='0';
+    blackScreen.style.width='100%';
+    blackScreen.style.height='100%';
+    blackScreen.style.background='black';
+    blackScreen.style.zIndex='9999';
+    document.body.appendChild(blackScreen);
+}
+
+</script>
+
+<style>
+@keyframes blinkRed{0%,50%,100%{opacity:1}25%,75%{opacity:0.2}}
+</style>
+
+</body>
+</html>
