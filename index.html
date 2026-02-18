@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALFISTORE.ID</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('file_0000000034007206bdfeecbb15c5b0a1') no-repeat center center fixed;
+      background-size: cover;
+      transition: background 0.5s, color 0.5s;
+    }
+    .page {
+      display: none;
+      height: 100vh;
+      width: 100%;
+      color: #000;
+    }
+    .active {
+      display: block;
+    }
+    .box {
+      background: rgba(255, 255, 255, 0.8);
+      margin: 50px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .blackout {
+      background: #000;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Halaman 1 -->
+<div id="hal1" class="page active">
+  <div class="box">
+    <h1>ALFISTORE.ID</h1>
+    <p>Halo teman-teman gamer selamat datang di website HTML Alfistore.id!<br>
+    Di sini kalian bisa membeli barang-barang di Roblox yang menurut kalian butuh!!!<br>
+    Berikut pilihan game Roblox yang kalian ingin telusuri untuk dibeli!</p>
+    <button onclick="showPage('halBlox')">BELI : BLOX FRUIT</button>
+    <button onclick="showPage('halFish')">BELI : FISH IT</button>
+  </div>
+</div>
+
+<!-- Halaman Blox Fruit -->
+<div id="halBlox" class="page">
+  <div class="box">
+    <h1>ALFISTORE.BLOX FRUIT</h1>
+    <p>Untuk Blox Fruit kita belum update, jadi hanya menyediakan Hearth ya teman-teman. Pilih Hearth berapa dengan harga murah!</p>
+    <button onclick="showPage('halJoki')">100 HEARTH : 1K</button>
+    <button onclick="showPage('halJoki')">200 HEARTH : 2K</button>
+    <button onclick="showPage('halJoki')">300 HEARTH : 3K</button>
+    <button onclick="showPage('halJoki')">400 HEARTH : 4K</button>
+    <button onclick="showPage('halJoki')">500 HEARTH : 5K</button>
+    <br><br>
+    <button onclick="showPage('hal1')">Kembali</button>
+  </div>
+</div>
+
+<!-- Halaman Fish It -->
+<div id="halFish" class="page">
+  <div class="box">
+    <h1>ALFISTORE.FISHIT</h1>
+    <p>Halo teman-teman! Di sini kalian bisa joki Fish It dan kami hanya menyediakan joki Rod Fish It ya.<br>Pencet tombol di bawah sesuai rod yang kalian mau!</p>
+    <button onclick="showPage('halJoki')">Hazmat Rod : 5K</button>
+    <button onclick="showPage('halJoki')">Ares Rod : 10K</button>
+    <button onclick="showPage('halJoki')">Angler Rod : 15K</button>
+    <button onclick="showPage('halJoki')">Bamboo Rod : 30K</button>
+    <button onclick="showPage('halJoki')">Ghosfin Rod : 30K</button>
+    <button onclick="showPage('halJoki')">Element Rod : 100K</button>
+    <button onclick="showPage('halJoki')">Diamond Rod : 200K</button>
+    <br><br>
+    <button onclick="showPage('hal1')">Kembali</button>
+  </div>
+</div>
+
+<!-- Halaman Format Joki -->
+<div id="halJoki" class="page">
+  <div class="box">
+    <h1>Format Joki</h1>
+    <p>SOAL: Masukkan nomor telepon kalian</p>
+    <input type="text" id="telp" placeholder="Masukkan nomor telepon">
+    <br>
+    <button onclick="showPage('halPesanan')">KIRIM</button>
+    <br><br>
+    <button onclick="showPage('hal1')">Kembali ke Beranda</button>
+  </div>
+</div>
+
+<!-- Halaman Pesanan -->
+<div id="halPesanan" class="page">
+  <div class="box">
+    <h1>Pesanan Anda di Proses!!</h1>
+    <p>Tolong chat nomor ini!! 082254591986</p>
+    <button onclick="akhiriCoding()">AKHIRI CODING</button>
+  </div>
+</div>
+
+<script>
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+
+  function akhiriCoding() {
+    document.body.classList.add('blackout');
+    document.body.innerHTML = ''; // Menghapus semua konten
+  }
+</script>
+
+</body>
+</html>
